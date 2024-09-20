@@ -5,7 +5,6 @@
   "repository": "https://github.com/iamvishnusankar/next-sitemap.git",
   "author": "Pranav Chaudhary",
   "license": "MIT",
-  "private": true,
   "type": "module",
   "workspaces": [
     "packages/*",
