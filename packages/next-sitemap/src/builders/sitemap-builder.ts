@@ -126,6 +126,12 @@ export class SitemapBuilder {
               )
 
               fieldArr.push(altRefField)
+            }else if(key === "canonicalRefs"){
+              const altRefField = this.buildCanonicalRefsXml(
+                field.canonicalRefs,
+              )
+
+              fieldArr.push(altRefField)
             } else if (key === 'news') {
               if (field.news) {
                 const newsField = this.buildNewsXml(field.news)
@@ -168,6 +174,14 @@ export class SitemapBuilder {
     return alternateRefs
       .map((alternateRef) => {
         return `<xhtml:link rel="alternate" hreflang="${alternateRef.hreflang}" href="${alternateRef.href}"/>`
+      })
+      .join('')
+  }
+
+  buildCanonicalRefsXml(canonicalRefs: Array<IAlternateRef> = []): string {
+    return canonicalRefs
+      .map((canonicalRefs) => {
+        return `<xhtml:link rel="canonical" hreflang="${canonicalRefs.hreflang}" href="${canonicalRefs.href}"/>`
       })
       .join('')
   }

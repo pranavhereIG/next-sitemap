@@ -3,17 +3,15 @@
   "version": "1.0.0",
   "main": "index.js",
   "repository": "https://github.com/iamvishnusankar/next-sitemap.git",
-  "author": "Vishnu Sankar",
+  "author": "Pranav Chaudhary",
   "license": "MIT",
   "private": true,
   "type": "module",
-  "workspaces": {
-    "packages": [
-      "packages/*",
-      "examples/*",
-      "docs"
-    ]
-  },
+  "workspaces": [
+    "packages/*",
+    "examples/*",
+    "docs"
+  ],
   "scripts": {
     "clean": "tsc --build --clean",
     "dev:test": "bun test --watch",

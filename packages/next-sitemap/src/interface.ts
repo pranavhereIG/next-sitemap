@@ -294,7 +294,7 @@ export type ISitemapField = {
   priority?: number
   alternateRefs?: Array<IAlternateRef>
   trailingSlash?: boolean
-
+  canonicalRefs?: Array<IAlternateRef>
   news?: IGoogleNewsEntry
   images?: Array<IImageEntry>
   videos?: Array<IVideoEntry>
